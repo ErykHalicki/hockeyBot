@@ -1,0 +1,64 @@
+create array of walls
+function to find x y position within the court
+scan for balls
+try to plot ball positions in the court space
+pick a ball and move there
+
+getting position within the court:
+  ultrasonic readings of distance from wall when
+  create a ray of where the ultrasonics are impacting the wall? 30degress how does that affect the readings, lazer pointers?
+  one side given
+  if the ultrasonic sensor ray goes through a hole, and has an inaccurate reading, move ore turn robot to try getting a better readings
+  depending on the orientation of the wall hit create different triangles
+  
+start by getting input from the arduino serial 
+then send commands to through arduino serial
+then determine position of robot assuming there are no holes in the wall
+then write the wall oobject system
+create a raycasting type thing to see where the ball would end up
+robot position determied by roughly where the center is
+need orientation of robot to be accurate
+can get via trigonometry and gyroscope
+then get the camera to work
+then get the robot to rotate towards a ball it sees
+then calculate the distance of a ball from the camera by radius size
+then create ball objects
+then try giving them a position relative to the court walls
+then try getting the robot to move towards them
+then create net objects
+then try getting the robot to shot at the nets
+then put it all together
+
+subject to change when arm is added, more complex system
+
+find way for software to work with both arduinos connected at the same time
+tetrix and sensory arudino need to be distinguished
+the two boards can print their id to serial until they are told to turn on 
+that way the serial port used is irrelevant
+so you can dete
+
+////////////////////////////
+	NEW PLAN
+
+TEST NEW COMMANDS
+ROLL IN A SQUARE
+ROLL BASED ON SENSOR DISTANCE
+MAKE MASTER SOFTWARE FUNCTIONAL
+GET RASPI TO WORK
+
+CONTINUE DEVELOPING BETTER SOFTWARE
+
+ADD AN ULTRASOUND LOOKING FORWARD TO KNOW FORWARD CLEARANCE
+
+BACKUP BEHAVIOUR, IF LOST, ROAM AND JUST SHOOT THE BALLS INTO THE OTHER SIDE 
+
+PIXY2, i2c communcation possible directly to prizm controller, all code on one board AMAZING!
+
+Find a way to possibly track position
+
+put in safeguards to not hit the wall
+
+think about possible edgecases/test for how well it works
+there will porobably be problems with getting balls stuck in corners
+
+create distance of ball estimation function to determine how far a ball is just based on the height of its center within the frame

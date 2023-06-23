@@ -1,0 +1,35 @@
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/syntastic'
+Plug 'lambdalisue/battery.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'valloric/youcompleteme'
+Plug 'morhetz/gruvbox'
+Plug 'rhysd/vim-clang-format'
+call plug#end()
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set number
+set nowrap
+set background=dark
+set tabstop=4
+set backspace=indent,eol,start
+let g:ClangFormatAutoEnable =1
+let g:gruvbox_transparent_bg=1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:battery_watch_on_startup=0
+let g:airline_section_y=0
+let g:airline_section_z='%l / %L'
+let g:airline#extensions#battery#enabled = 1
+let g:syntastic_cpp_compiler_options = "-std=c++20"
+autocmd vimenter * ++nested colorscheme gruvbox
+map <C-K> :python3file <path-to-this-file>/clang-format.py<cr>
+imap <C-K> <c-o>:python3file <path-to-this-file>/clang-format.py<cr>
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
