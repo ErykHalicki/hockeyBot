@@ -1,5 +1,6 @@
 # robotics12
 [youtube playlist of demos](https://www.youtube.com/playlist?list=PL6404xTMR3qzpLwPLvS3RxEhVhWoS1jKk)
+![IMG 7719.jpeg](photos/IMG_7719.jpeg)
 
 Code and 3d models from my work in our senior year robotics team
 Participated in the Skills Canada competition, winning first at toronto regionals, ontartio provincials and nationals
